@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  background: linear-gradient(red, yellow);
+}
+
+@keyframes logo-animate {
+  from {
+    color: aqua;
+  }
+  to {
+    color: black;
+  }
+}
+#logo a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(245, 243, 160);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  font-size: 3rem;
+  margin-left: 1.2rem;
+  animation-name: logo-animate;
+  animation-timing-function: ease-in;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+/* -----------------------hamburger code--------------- */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 3rem;
+  height: 3rem;
+  display: none;
+  margin-right: 2rem;
+}
+.hamburger span {
+  background-color: white;
+  width: 100%;
+  height: 3px;
+}
+/* -----------------------hamburger code--------------- */
+
+.main-header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+.main-header ul li a {
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  transition: transform 0.5s ease-out;
+}
+.main-header ul li a:hover {
+  color: white;
+  border-radius: 4px;
+  transform: scale(2);
+}
+
+/* -----------------------side drawer code--------------- */
+#side-drawer {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#side-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#side-drawer ul li {
+  margin: 1rem;
+}
+#side-drawer a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+#side-drawer a:hover {
+  color: red;
+}
+#side-drawer:target {
+  display: block;
+}
+
+#side-drawer header {
+  display: flex;
+  align-items: center;
+  padding: 2rem 5rem;
+}
+/* -----------------------side drawer code--------------- */
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(ocean.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+}
+.hero .main {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main {
+  background-color: rgba(51, 47, 47, 0.6);
+  box-shadow: 2px 4px 8px rgb(68, 67, 67);
+  padding: 50px;
+  width: 500px;
+  border-radius: 5px;
+}
+.main h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+}
+.main p {
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.hero a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background-color: yellow;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.hero a:hover {
+  color: red;
+  transform: 0.3s;
+}
+
+/* Responsive Design */
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: black;
+  margin: 2.5rem 0;
+}
+#latest-product {
+  width: 50%;
+  margin: 3rem auto;
+}
+#latest-product ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.food-item {
+  background-color: rgb(228, 206, 182);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.food-item img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+.food-item-content {
+  text-align: center;
+  padding: 1.2rem;
+}
+h3 {
+  font-size: 1.4rem;
+  color: black;
+  margin-bottom: 1.25rem;
+}
+.btn {
+  background-color: rgb(228, 157, 44);
+  padding: 0.5rem 1.4rem;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+/* media query for responsive */
+
+@media (max-width: 48rem) {
+  .main-header ul {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+
+  #latest-product ul {
+    grid-template-columns: 100%;
+  }
+}
